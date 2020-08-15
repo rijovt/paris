@@ -24,4 +24,9 @@ class PagesController extends Controller
     	);
     	return view('pages.services')->with($data);
     }
+
+    public function username(request $data)
+    {
+        return $data = \App\User::where('username',$data->username)->count();
+    }
 }
